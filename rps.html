@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./rps.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="game-header">
+        <a href="index.html" class="back-btn">&larr; Back to Hub</a>
+        <h1 style="margin-top: 1rem;">✊ ✋ ✌️</h1>
+        <p>Rock, Paper, Scissors</p>
+      </header>
+      
+      <div class="glass-panel main-container">
+        
+        <div class="scoreboard">
+            <div class="score-card">
+                <h3>You</h3>
+                <span id="player-score">0</span>
+            </div>
+            <div class="score-card">
+                <h3>Computer</h3>
+                <span id="computer-score">0</span>
+            </div>
+        </div>
+        
+        <div class="arena">
+            <div class="hand-container" id="player-hand-container">
+                <div class="hand" id="player-hand">✊</div>
+            </div>
+            <div class="vs">VS</div>
+            <div class="hand-container" id="computer-hand-container">
+                <div class="hand" id="computer-hand">✊</div>
+            </div>
+        </div>
+
+        <div class="result-text" id="result-text">Choose your weapon!</div>
+        
+        <div class="controls">
+            <button class="choice-btn" data-choice="rock">✊</button>
+            <button class="choice-btn" data-choice="paper">✋</button>
+            <button class="choice-btn" data-choice="scissors">✌️</button>
+        </div>
+        
+      </div>
+    </div>
+    <script src="./rps.js"></script>
+  </body>
+</html>

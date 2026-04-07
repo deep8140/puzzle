@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Puzzle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div id="app">
+      <header style="position: relative;">
+        <a href="index.html" class="back-btn" style="position: absolute; left: 0; top: 0; text-decoration: none; color: white; background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 5px;">&larr; Back to Hub</a>
+        <h1 style="margin-top: 1rem;">🖼️ Photo Puzzle</h1>
+        <p>Upload a photo, choose your difficulty, and start solving!</p>
+      </header>
+      
+      <div class="controls glass-panel">
+        <label for="image-upload" class="custom-file-upload">
+           <span id="upload-text">Upload Image</span>
+           <input type="file" id="image-upload" accept="image/*" />
+        </label>
+        
+        <button id="camera-btn" class="secondary-btn">📷 Take Photo</button>
+        
+        <div class="difficulty-control">
+          <label for="difficulty">Difficulty: <span id="diff-val">1</span> (<span id="grid-size">3x3</span>)</label>
+          <input type="range" id="difficulty" min="1" max="10" value="1" />
+        </div>
+        
+        <button id="start-btn" disabled>Start Game</button>
+      </div>
+
+      <div class="game-area">
+        <div id="puzzle-board-container" class="hidden glass-panel">
+           <div id="puzzle-board"></div>
+        </div>
+      </div>
+      
+      <!-- Camera Modal -->
+      <div id="camera-modal" class="hidden glass-panel">
+        <div class="camera-container">
+          <video id="camera-preview" autoplay playsinline></video>
+          <div class="camera-controls">
+            <button id="snap-btn">📸 Snap</button>
+            <button id="close-camera-btn" class="danger-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+      
+      <div id="win-screen" class="hidden glass-panel">
+        <h2>🎉 Puzzle Solved! 🎉</h2>
+        <p>Beautiful matching!</p>
+        <button id="restart-btn">Play Again</button>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,59 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photo Puzzle</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <div id="app">
-      <header>
-        <h1>🖼️ Photo Puzzle</h1>
-        <p>Upload a photo, choose your difficulty, and start solving!</p>
-      </header>
-      
-      <div class="controls glass-panel">
-        <label for="image-upload" class="custom-file-upload">
-           <span id="upload-text">Upload Image</span>
-           <input type="file" id="image-upload" accept="image/*" />
-        </label>
-        
-        <button id="camera-btn" class="secondary-btn">📷 Take Photo</button>
-        
-        <div class="difficulty-control">
-          <label for="difficulty">Difficulty: <span id="diff-val">1</span> (<span id="grid-size">3x3</span>)</label>
-          <input type="range" id="difficulty" min="1" max="10" value="1" />
-        </div>
-        
-        <button id="start-btn" disabled>Start Game</button>
-      </div>
+    <link rel="stylesheet" href="./hub.css">
+</head>
+<body>
+    <div class="hub-container">
+        <header class="hub-header glass-panel">
+            <h1>🎮 Arcade Hub</h1>
+            <p>Welcome to your personal game collection. Choose a game to play!</p>
+        </header>
 
-      <div class="game-area">
-        <div id="puzzle-board-container" class="hidden glass-panel">
-           <div id="puzzle-board"></div>
-        </div>
-      </div>
-      
-      <!-- Camera Modal -->
-      <div id="camera-modal" class="hidden glass-panel">
-        <div class="camera-container">
-          <video id="camera-preview" autoplay playsinline></video>
-          <div class="camera-controls">
-            <button id="snap-btn">📸 Snap</button>
-            <button id="close-camera-btn" class="danger-btn">Cancel</button>
-          </div>
-        </div>
-      </div>
-      
-      <div id="win-screen" class="hidden glass-panel">
-        <h2>🎉 Puzzle Solved! 🎉</h2>
-        <p>Beautiful matching!</p>
-        <button id="restart-btn">Play Again</button>
-      </div>
+        <main class="games-grid">
+            <a href="puzzle.html" class="game-card glass-panel">
+                <div class="game-icon">🧩</div>
+                <h2>Photo Puzzle</h2>
+                <p>Upload a photo and solve the sliding puzzle.</p>
+            </a>
+            
+            <a href="tictactoe.html" class="game-card glass-panel">
+                <div class="game-icon">❌⭕</div>
+                <h2>Tic-Tac-Toe</h2>
+                <p>Classic game of X's and O's.</p>
+            </a>
+
+            <a href="memory.html" class="game-card glass-panel">
+                <div class="game-icon">🃏</div>
+                <h2>Memory Match</h2>
+                <p>Test your memory by matching card pairs.</p>
+            </a>
+
+            <a href="snake.html" class="game-card glass-panel">
+                <div class="game-icon">🐍</div>
+                <h2>Retro Snake</h2>
+                <p>Eat the food and grow as long as you can.</p>
+            </a>
+
+            <a href="rps.html" class="game-card glass-panel">
+                <div class="game-icon">✊✋✌️</div>
+                <h2>Rock Paper Scissors</h2>
+                <p>Can you beat the computer in this classic?</p>
+            </a>
+        </main>
+        
+        <footer class="hub-footer">
+            <p>Built with ❤️ Modern Arcades</p>
+        </footer>
     </div>
-    <script src="./main.js"></script>
-  </body>
+</body>
 </html>

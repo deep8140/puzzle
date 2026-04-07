@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Snake</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./snake.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="game-header">
+        <a href="index.html" class="back-btn">&larr; Back to Hub</a>
+        <h1 style="margin-top: 1rem;">🐍 Retro Snake</h1>
+        <p>Eat the apples and grow!</p>
+      </header>
+      
+      <div class="glass-panel main-container">
+        <div class="stats">
+            <span id="score-text">Score: <span id="score">0</span></span>
+            <span id="high-score-text">High Score: <span id="high-score">0</span></span>
+        </div>
+        
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        
+        <div class="controls-overlay" id="start-overlay">
+          <h2>Ready to play?</h2>
+          <p>Use Arrow Keys to move</p>
+          <button id="start-btn" class="generic-btn">Start Game</button>
+        </div>
+        
+        <div class="controls-overlay hidden" id="game-over-overlay">
+          <h2>Game Over!</h2>
+          <button id="restart-btn" class="generic-btn">Try Again</button>
+        </div>
+
+      </div>
+    </div>
+    <script src="./snake.js"></script>
+  </body>
+</html>

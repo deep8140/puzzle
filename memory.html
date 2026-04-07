@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Match</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./memory.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="game-header">
+        <a href="index.html" class="back-btn">&larr; Back to Hub</a>
+        <h1 style="margin-top: 1rem;">🃏 Memory Match</h1>
+        <p>Find all the matching pairs!</p>
+      </header>
+      
+      <div class="glass-panel main-container">
+        <div class="stats">
+            <span id="moves-text">Moves: <span id="moves">0</span></span>
+            <span id="timer-text">Time: <span id="timer">0</span>s</span>
+        </div>
+        <div class="memory-board" id="memory-board">
+        </div>
+        <button id="restart-btn" class="generic-btn">Restart Game</button>
+      </div>
+    </div>
+    <script src="./memory.js"></script>
+  </body>
+</html>
