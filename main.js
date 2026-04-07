@@ -1,5 +1,3 @@
-import './style.css';
-
 // DOM Elements
 const imageUpload = document.getElementById('image-upload');
 const uploadText = document.getElementById('upload-text');
