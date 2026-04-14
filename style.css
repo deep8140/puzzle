@@ -203,6 +203,10 @@ button:disabled {
   display: none !important;
 }
 
+.no-transition .puzzle-piece {
+  transition: none !important;
+}
+
 .game-area {
   width: 100%;
   display: flex;
